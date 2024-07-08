@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hiking Mountains</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-expand-lg navbar-background-color fixed-top">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center align-items-center"
+          id="navbarNav"
+        >
+          <ul class="nav justify-content-center gap-5 align-items-center">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-black hover-item"
+                aria-current="page"
+                href="#home"
+                >HOME</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black hover-item" href="#mountain"
+                >MOUNTAIN</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <nav
+                class="navbar d-flex justify-content-center align-items-center"
+              >
+                <div class="container">
+                  <a class="navbar-brand" href="#home">
+                    <img src="img/logo.svg" width="40px" />
+                  </a>
+                </div>
+              </nav>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black hover-item" href="#map-section">MAP</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-black hover-item" href="#contacts"
+                >CONTACTS</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- OFFCANVAS -->
+    <div
+      class="offcanvas offcanvas-end navbar-background-color"
+      data-bs-scroll="true"
+      data-bs-backdrop="false"
+      tabindex="-1"
+      id="offcanvasScrolling"
+      aria-labelledby="offcanvasScrollingLabel"
+    >
+      <div class="offcanvas-header m-2">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div
+        class="offcanvas-body d-flex flex-column justify-content-center align-items-center"
+      >
+        
+      
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#mountain">MOUNTAIN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#map-section">MAP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacts">CONTACTS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!----------------------HERO SECTION-------------------------->
+    <div
+     id="home" class="hero-section section d-flex justify-content-center align-items-center"
+    >
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-12 hero-text">
+            <h1>Hiking Mountains</h1>
+            <h3>in the</h3>
+            <h1>PHILIPPINES</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!----------------------DIVIDER-------------------------->
+    <div class="custom-shape-divider-bottom-1720383779">
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+          opacity=".50"
+          class="shape-fill"
+        ></path>
+        <path
+          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+          opacity=".5"
+          class="shape-fill"
+        ></path>
+        <path
+          d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+          class="shape-fill"
+        ></path>
+      </svg>
+    </div>
+
+    <!----------------------ABOUT SECTION-------------------------->
+    <div class="section about-section d-flex justify-content-center align-items-center text-center">
+      <div class="container m-0 p-0">
+        <di class="row m-0 ">
+          <div class="col-5"></div>
+          <div class="col-md-7 col-12 m-0 p-5 ">
+            <h2 class="text text-secondary">About this page</h2>
+            <p class=" fs-4 text text-secondary" style="text-align: justify;">
+              Discover the Philippines' most exhilarating hiking destinations, 
+              featuring majestic peaks , each offering unique challenges and 
+              stunning natural beauty. Traverse lush forests, rugged terrain, 
+              and scenic trails that lead to panoramic views of the Philippine 
+              archipelago. These hikes promise memorable adventures for outdoor 
+              enthusiasts of all levels. Whether scaling the heights of these 
+              Mountains , each ascent reveals diverse ecosystems and cultural 
+              treasures waiting to be explored. Embark on an unforgettable journey 
+              through the Philippines' top hiking mountains, where every step is a
+              testament to the country's rich natural heritage and adventurous
+              spirit.
+            </p>
+        </div>
+      </div>
+    </div>
+    <!----------------------MOUNTAIN SECTION-------------------------->
+    <div id="mountain" class="mountain-section text-center section d-flex flex-column justify-content-center align-items-center ">
+      <h2 class=" text-secondary">Hiking</h2>
+      <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3 m-0 p-0 ">
+        <div class="col m-0 p-0">
+          <div class="p-0 m-0 d-flex justify-content-center align-items-center text-center">
+            <div class="book m-3">"
+              <ul class="list-group list-group-flush bg-transparent custom-font-size">
+                <li class="list-group-item bg-transparent ">name: Mount Pulag</li>
+                <li class="list-group-item bg-transparent">location: Kayapa, Nueva Vizcaya</li>
+                <li class="list-group-item bg-transparent">difficulty: Hard</li>
+                <li class="list-group-item bg-transparent">length: 14.6km</li>
+                <li class="list-group-item bg-transparent">duration: 5h 9m</li>
+                <li class="list-group-item bg-transparent">latitude: 16.5977263</li>
+                <li class="list-group-item bg-transparent">longitude: 120.8987919</li>
+              </ul>
+              <div class="cover">
+                  <img src="https://miro.medium.com/v2/resize:fit:1200/1*niwRj-BSJeQz-R46bu0f_g.jpeg" alt="#">
+              </div>
+             </div>
+          </div>
+        </div>
+        <div class="col m-0 p-0">
+          <div class="p-0 m-0 d-flex justify-content-center align-items-center text-center">
+            <div class="book m-3">
+              <ul class="list-group list-group-flush bg-transparent custom-font-size">
+                <li class="list-group-item bg-transparent ">name: Mount Batulao</li>
+                <li class="list-group-item bg-transparent">location: Calaca, Batangas</li>
+                <li class="list-group-item bg-transparent">difficulty: Moderate</li>
+                <li class="list-group-item bg-transparent">length: 10.3km</li>
+                <li class="list-group-item bg-transparent">duration: 4h</li>
+                <li class="list-group-item bg-transparent">latitude: 14.0399434</li>
+                <li class="list-group-item bg-transparent">longitude: 120.8023782</li>
+              </ul>
+            <div class="cover">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1kUi2NDzwm5vdkL_ZpFxp6qu-Esye6pWVfQnqu3-Cic-N-uxJKBM_f-aNL4vMZWpqQ6Q&usqp=CAU" alt="#">
+            </div>
+           </div>
+          </div>
+        </div>
+        <div class="col m-0 p-0">
+          <div class="p-0 m-0 d-flex justify-content-center align-items-center text-center">
+            <div class="book m-3">
+              <ul class="list-group list-group-flush bg-transparent custom-font-size">
+                <li class="list-group-item bg-transparent ">name: Mount Tapyas</li>
+                <li class="list-group-item bg-transparent">location: Coron, Palawan</li>
+                <li class="list-group-item bg-transparent">difficulty: Moderate</li>
+                <li class="list-group-item bg-transparent">length: 1.1km</li>
+                <li class="list-group-item bg-transparent">duration: 36m</li>
+                <li class="list-group-item bg-transparent">latitude: 12.004846</li>
+                <li class="list-group-item bg-transparent">longitude: 120.2047511</li>
+              </ul>
+              <div class="cover">
+                  <img src="https://gttp.imgix.net/196367/x/0/the-top-view-of-mt-tapyas-in-coron.jpg?auto=format%2Ccompress&crop=faces%2Cedges%2Ccenter&bg=%23fff&q=32&fit=crop&h=800" alt="#">
+              </div>
+             </div>
+          </div>
+        </div>
+        <div class="col m-0 p-0">
+          <div class="p-0 m-0 d-flex justify-content-center align-items-center text-center">
+            <div class="book m-3">
+              <ul class="list-group list-group-flush bg-transparent custom-font-size">
+                <li class="list-group-item bg-transparent ">name: Mount Ulap</li>
+                <li class="list-group-item bg-transparent">location: Benguet</li>
+                <li class="list-group-item bg-transparent">difficulty: Hard</li>
+                <li class="list-group-item bg-transparent">length: 7.9km</li>
+                <li class="list-group-item bg-transparent">duration: 3h 31m</li>
+                <li class="list-group-item bg-transparent">latitude: 16.2870681</li>
+                <li class="list-group-item bg-transparent">longitude: 120.2047511</li>
+              </ul>
+            <div class="cover">
+                <img src="https://1.bp.blogspot.com/-K1fyMYHPTNk/WINUr3f4yQI/AAAAAAAAOlE/pjUINEOhFewDo5t96qVq7QSfSenDKXSmACEw/s1600/Mt%2BUlap.jpg" alt="#">
+            </div>
+           </div>
+          </div>
+        </div>
+        <!-- second row -->
+        <div class="col m-0 p-0">
+          <div class="p-0 m-0 d-flex justify-content-center align-items-center text-center">
+            <div class="book m-3">
+              <ul class="list-group list-group-flush bg-transparent custom-font-size">
+                <li class="list-group-item bg-transparent ">name: Mount Pinatubo</li>
+                <li class="list-group-item bg-transparent">location: Zambales</li>
+                <li class="list-group-item bg-transparent">difficulty: Hard</li>
+                <li class="list-group-item bg-transparent">length: 11.1km</li>
+                <li class="list-group-item bg-transparent">duration: 4h 1m</li>
+                <li class="list-group-item bg-transparent">latitude: 15.1445564</li>
+                <li class="list-group-item bg-transparent">longitude: 120.3490617</li>
+              </ul>
+            <div class="cover">
+                <img src="https://images.unsplash.com/photo-1709752431125-f6248336ba21?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="#">
+            </div>
+           </div></div>
+        </div>
+        <div class="col m-0 p-0">
+          <div class="p-0 m-0 d-flex justify-content-center align-items-center text-center">
+            <div class="book m-3">
+              <ul class="list-group list-group-flush bg-transparent custom-font-size">
+                <li class="list-group-item bg-transparent ">name: Mount Daraitan</li>
+                <li class="list-group-item bg-transparent">location: Bengue</li>
+                <li class="list-group-item bg-transparent">difficulty: Hard</li>
+                <li class="list-group-item bg-transparent">length: 6km</li>
+                <li class="list-group-item bg-transparent">duration: 4h</li>
+                <li class="list-group-item bg-transparent">latitude: 14.6161523</li>
+                <li class="list-group-item bg-transparent">longitude: 121.4379731</li>
+              </ul>
+            <div class="cover">
+                <img src="https://www.shutterstock.com/image-photo/necklace-peak-mount-daraitan-mountain-600nw-2280647311.jpg" alt="#">
+            </div>
+           </div>
+          </div>
+        </div>
+        <div class="col m-0 p-0">
+          <div class="p-0 m-0 d-flex justify-content-center align-items-center text-center">
+            <div class="book m-3">
+              <ul class="list-group list-group-flush bg-transparent custom-font-size">
+                <li class="list-group-item bg-transparent ">name: Tarak</li>
+                <li class="list-group-item bg-transparent">location: Bataan</li>
+                <li class="list-group-item bg-transparent">difficulty: Hard</li>
+                <li class="list-group-item bg-transparent">length: 10km</li>
+                <li class="list-group-item bg-transparent">duration: 7h</li>
+                <li class="list-group-item bg-transparent">latitude: 14.5060828</li>
+                <li class="list-group-item bg-transparent">longitude: 120.490637</li>
+              </ul>
+            <div class="cover">
+                <img src="https://hiketomountains.com/wp-content/uploads/2022/01/Tarak-Ridge-Day-Hike-41.jpg" alt="#">
+            </div>
+           </div>
+          </div>
+        </div>
+        <div class="col m-0 p-0">
+          <div class="p-0 m-0 d-flex justify-content-center align-items-center text-center">
+            <div class="book m-3">
+              <ul class="list-group list-group-flush bg-transparent custom-font-size">
+                <li class="list-group-item bg-transparent ">name: Mount Pico de Loro</li>
+                <li class="list-group-item bg-transparent">location: Ilocos Norte</li>
+                <li class="list-group-item bg-transparent">difficulty: "Moderate</li>
+                <li class="list-group-item bg-transparent">length: 4km</li>
+                <li class="list-group-item bg-transparent">duration: 4h</li>
+                <li class="list-group-item bg-transparent">latitude: 18.5139062</li>
+                <li class="list-group-item bg-transparent">longitude: 120.8868109</li>
+              </ul>
+            <div class="cover">
+                <img src="https://nojuanisanisland.com/wp-content/uploads/2015/05/0000000.jpg" alt="#">
+            </div>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!----------------------MAP-------------------------->
+   
+    
+      <div id="map-section" class="section map-section">
+          <h2 class=" text-secondary text-center ">Map Locator</h2>
+              <div class="p-3 text-center">
+                <form id="addressForm">
+                  <label for="latitude">Latitude:</label>
+                  <input class=" rounded border border-2" type="text" id="latitude" name="latitude">
+                  <label for="longitude">Longitude:</label>
+                  <input class=" rounded border border-2" type="text" id="longitude" name="longitude">
+                  <button type="submit" class="btn btn-light">Submit</button>
+                  <label for="address" style="padding-left: 20px;">Address:</label>
+                  <input class=" rounded border border-2" type="text" id="address" name="address" >
+                  <button id="findAddressButton" class="btn btn-light ">Submit</button>            
+              </form>
+              </div>
+          <div  id="map"></div>
+      </div>
+      <!----------------------CONTACTS-------------------------->
+     <div class="contact-setion d-flex justify-content-center align-items-center">
+      <div class="form-container d-flex justify-content-center align-items-center">
+        <form class="form">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input required="" name="email" id="email" type="text">
+          </div>
+          <div class="form-group">
+            <label for="textarea">How Can We Help You?</label>
+            <textarea required="" cols="50" rows="10" id="textarea" name="textarea">          </textarea>
+          </div>
+          <button type="submit" class="form-submit-btn btn btn-light">Submit</button>
+        </form>
+      </div>
+     </div>
+    <!-- FOOTER -->
+
+    <footer
+      class="text-center text-white d-flex justify-content-center align-items-center"
+    >
+      <h6>&copy;2024 All rights reserved.</h6>
+    </footer>
+
+   
+  
+    <!----------------------SCRIPT-------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="index.js"></script>
+
+    
+    
+  </body>
+</html>
