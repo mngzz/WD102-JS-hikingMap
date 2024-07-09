@@ -1,4 +1,5 @@
-const defaultAddress = "Mount Pulag";
+const defaultAddress =
+  "Mount Pulag Kayapa, Nueva Vizcaya, Cagayan Valley, Philippines";
 const defaultLat = 16.5977263;
 const defaultLng = 120.8987919;
 var map = L.map("map").setView([defaultLat, defaultLng], 13);
@@ -10,7 +11,12 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 markerCoordinates = [defaultLat, defaultLng];
 var marker = L.marker(markerCoordinates).addTo(map);
-marker.bindPopup("<b>Address:</b> " + defaultAddress);
+marker.bindPopup(
+  "<b>Address:</b> " +
+    defaultAddress +
+    "<br><b>Coordinates:</b>" +
+    `${defaultLat}, ${defaultLng}`
+);
 
 document.getElementById("addressForm").addEventListener("submit", function (e) {
   e.preventDefault();
@@ -84,3 +90,146 @@ document
         console.error("Error with geocoding:", error);
       });
   });
+
+// IMAGE ONLCICK
+function showAddressOnMapPulag() {
+  var address =
+      "Mount Pulag, Kayapa, Nueva Vizcaya, Cagayan Valley, Philippines",
+    lat = 16.5977263,
+    lng = 120.8987919;
+
+  if (!marker) marker = L.marker([lat, lng]).addTo(map);
+  else marker.setLatLng([lat, lng]);
+
+  marker
+    .bindPopup(
+      `<b>Coordinates:</b> ${address}` +
+        `<br><b>Coordinates:</b> ${lat}, ${lng}`
+    )
+    .openPopup();
+  map.setView([lat, lng], 13);
+}
+
+function showAddressOnMapBatulao() {
+  var address =
+      "Mount Batulao, Calaca, Batangas, Calabarzon, 4212, Philippines",
+    lat = 14.0399434,
+    lng = 120.8023782;
+
+  if (!marker) marker = L.marker([lat, lng]).addTo(map);
+  else marker.setLatLng([lat, lng]);
+
+  marker
+    .bindPopup(
+      `<b>Coordinates:</b> ${address}` +
+        `<br><b>Coordinates:</b> ${lat}, ${lng}`
+    )
+    .openPopup();
+  map.setView([lat, lng], 13);
+}
+
+function showAddressOnMapTapyas() {
+  var address = " Mount Tapyas, Coron, Palawan, Mimaropa, 5316, Philippines",
+    lat = 12.004846,
+    lng = 120.2047511;
+
+  if (!marker) marker = L.marker([lat, lng]).addTo(map);
+  else marker.setLatLng([lat, lng]);
+
+  marker
+    .bindPopup(
+      `<b>Coordinates:</b> ${address}` +
+        `<br><b>Coordinates:</b> ${lat}, ${lng}`
+    )
+    .openPopup();
+  map.setView([lat, lng], 13);
+}
+
+function showAddressOnMapUlap() {
+  var address =
+      "Mount Ulap, Benguet, Cordillera Administrative Region, Philippines",
+    lat = 16.2870681,
+    lng = 120.6322888;
+
+  if (!marker) marker = L.marker([lat, lng]).addTo(map);
+  else marker.setLatLng([lat, lng]);
+
+  marker
+    .bindPopup(
+      `<b>Coordinates:</b> ${address}` +
+        `<br><b>Coordinates:</b> ${lat}, ${lng}`
+    )
+    .openPopup();
+  map.setView([lat, lng], 13);
+}
+
+function showAddressOnMapPinatubo() {
+  var address =
+      "Mount Pico de Loro, Pagudpud, Ilocos Norte, Ilocos Region, 2919, Philippines",
+    lat = 18.5139062,
+    lng = 120.8868109;
+
+  if (!marker) marker = L.marker([lat, lng]).addTo(map);
+  else marker.setLatLng([lat, lng]);
+
+  marker
+    .bindPopup(
+      `<b>Coordinates:</b> ${address}` +
+        `<br><b>Coordinates:</b> ${lat}, ${lng}`
+    )
+    .openPopup();
+  map.setView([lat, lng], 13);
+}
+
+function showAddressOnMapDaraitan() {
+  var address = "Mount Pinatubo, Zambales, Central Luzon, Philippines",
+    lat = 15.1445564,
+    lng = 120.3490617;
+
+  if (!marker) marker = L.marker([lat, lng]).addTo(map);
+  else marker.setLatLng([lat, lng]);
+
+  marker
+    .bindPopup(
+      `<b>Coordinates:</b> ${address}` +
+        `<br><b>Coordinates:</b> ${lat}, ${lng}`
+    )
+    .openPopup();
+  map.setView([lat, lng], 13);
+}
+//////////////
+
+function showAddressOnMapTarak() {
+  var address = "Tarak Peak, Mariveles, Bataan, Central Luzon, Philippines",
+    lat = 14.5060828,
+    lng = 120.490637;
+
+  if (!marker) marker = L.marker([lat, lng]).addTo(map);
+  else marker.setLatLng([lat, lng]);
+
+  marker
+    .bindPopup(
+      `<b>Coordinates:</b> ${address}` +
+        `<br><b>Coordinates:</b> ${lat}, ${lng}`
+    )
+    .openPopup();
+  map.setView([lat, lng], 13);
+}
+
+function showAddressOnMapPico() {
+  var address =
+      "Mount Pico de Loro, Pagudpud, Ilocos Norte, Ilocos Region, 2919, Philippines",
+    lat = 18.5139062,
+    lng = 120.8868109;
+
+  if (!marker) marker = L.marker([lat, lng]).addTo(map);
+  else marker.setLatLng([lat, lng]);
+
+  marker
+    .bindPopup(
+      `<b>Coordinates:</b> ${address}` +
+        `<br><b>Coordinates:</b> ${lat}, ${lng}`
+    )
+    .openPopup();
+  map.setView([lat, lng], 13);
+}
