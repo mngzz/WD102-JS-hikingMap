@@ -91,7 +91,7 @@ document
       });
   });
 
-// IMAGE ONLCICK
+///////////////// IMAGE ONLCICK /////////////////////////
 function showAddressOnMapPulag() {
   var address =
       "Mount Pulag, Kayapa, Nueva Vizcaya, Cagayan Valley, Philippines",
@@ -164,24 +164,6 @@ function showAddressOnMapUlap() {
 }
 
 function showAddressOnMapPinatubo() {
-  var address =
-      "Mount Pico de Loro, Pagudpud, Ilocos Norte, Ilocos Region, 2919, Philippines",
-    lat = 18.5139062,
-    lng = 120.8868109;
-
-  if (!marker) marker = L.marker([lat, lng]).addTo(map);
-  else marker.setLatLng([lat, lng]);
-
-  marker
-    .bindPopup(
-      `<b>Coordinates:</b> ${address}` +
-        `<br><b>Coordinates:</b> ${lat}, ${lng}`
-    )
-    .openPopup();
-  map.setView([lat, lng], 13);
-}
-
-function showAddressOnMapDaraitan() {
   var address = "Mount Pinatubo, Zambales, Central Luzon, Philippines",
     lat = 15.1445564,
     lng = 120.3490617;
@@ -197,7 +179,23 @@ function showAddressOnMapDaraitan() {
     .openPopup();
   map.setView([lat, lng], 13);
 }
-//////////////
+
+function showAddressOnMapDaraitan() {
+  var address = "Mount Daraitan, General Nakar, Calabarzon, 4338, Philippines",
+    lat = 14.6161523,
+    lng = 121.4379731;
+
+  if (!marker) marker = L.marker([lat, lng]).addTo(map);
+  else marker.setLatLng([lat, lng]);
+
+  marker
+    .bindPopup(
+      `<b>Coordinates:</b> ${address}` +
+        `<br><b>Coordinates:</b> ${lat}, ${lng}`
+    )
+    .openPopup();
+  map.setView([lat, lng], 13);
+}
 
 function showAddressOnMapTarak() {
   var address = "Tarak Peak, Mariveles, Bataan, Central Luzon, Philippines",
