@@ -103,8 +103,7 @@ function showAddressOnMapPulag() {
 
   marker
     .bindPopup(
-      `<b>Coordinates:</b> ${address}` +
-        `<br><b>Coordinates:</b> ${lat}, ${lng}`
+      `<b>Address:</b> ${address}` + `<br><b>Coordinates:</b> ${lat}, ${lng}`
     )
     .openPopup();
   map.setView([lat, lng], 13);
@@ -121,8 +120,7 @@ function showAddressOnMapBatulao() {
 
   marker
     .bindPopup(
-      `<b>Coordinates:</b> ${address}` +
-        `<br><b>Coordinates:</b> ${lat}, ${lng}`
+      `<b>Address:</b> ${address}` + `<br><b>Coordinates:</b> ${lat}, ${lng}`
     )
     .openPopup();
   map.setView([lat, lng], 13);
@@ -138,8 +136,7 @@ function showAddressOnMapTapyas() {
 
   marker
     .bindPopup(
-      `<b>Coordinates:</b> ${address}` +
-        `<br><b>Coordinates:</b> ${lat}, ${lng}`
+      `<b>Address:</b> ${address}` + `<br><b>Coordinates:</b> ${lat}, ${lng}`
     )
     .openPopup();
   map.setView([lat, lng], 13);
@@ -156,8 +153,7 @@ function showAddressOnMapUlap() {
 
   marker
     .bindPopup(
-      `<b>Coordinates:</b> ${address}` +
-        `<br><b>Coordinates:</b> ${lat}, ${lng}`
+      `<b>Address:</b> ${address}` + `<br><b>Coordinates:</b> ${lat}, ${lng}`
     )
     .openPopup();
   map.setView([lat, lng], 13);
@@ -173,8 +169,7 @@ function showAddressOnMapPinatubo() {
 
   marker
     .bindPopup(
-      `<b>Coordinates:</b> ${address}` +
-        `<br><b>Coordinates:</b> ${lat}, ${lng}`
+      `<b>Address:</b> ${address}` + `<br><b>Coordinates:</b> ${lat}, ${lng}`
     )
     .openPopup();
   map.setView([lat, lng], 13);
@@ -190,8 +185,7 @@ function showAddressOnMapDaraitan() {
 
   marker
     .bindPopup(
-      `<b>Coordinates:</b> ${address}` +
-        `<br><b>Coordinates:</b> ${lat}, ${lng}`
+      `<b>Address:</b> ${address}` + `<br><b>Coordinates:</b> ${lat}, ${lng}`
     )
     .openPopup();
   map.setView([lat, lng], 13);
@@ -207,8 +201,7 @@ function showAddressOnMapTarak() {
 
   marker
     .bindPopup(
-      `<b>Coordinates:</b> ${address}` +
-        `<br><b>Coordinates:</b> ${lat}, ${lng}`
+      `<b>Address:</b> ${address}` + `<br><b>Coordinates:</b> ${lat}, ${lng}`
     )
     .openPopup();
   map.setView([lat, lng], 13);
@@ -225,8 +218,7 @@ function showAddressOnMapPico() {
 
   marker
     .bindPopup(
-      `<b>Coordinates:</b> ${address}` +
-        `<br><b>Coordinates:</b> ${lat}, ${lng}`
+      `<b>Address:</b> ${address}` + `<br><b>Coordinates:</b> ${lat}, ${lng}`
     )
     .openPopup();
   map.setView([lat, lng], 13);
